@@ -5,7 +5,8 @@ const sequelize = new Sequelize('postgres://localhost:5432/nodegresql');
 
 const Frienemy = sequelize.define('frienemy', {
   name: Sequelize.STRING,
-  birthday: Sequelize.DATE
+  birthday: Sequelize.DATE,
+  friend: Sequelize.BOOLEAN
 });
 
 const Project = sequelize.define('project', {
@@ -14,17 +15,19 @@ const Project = sequelize.define('project', {
 
 Project.hasMany(Frienemy, {as: 'workers'});
 
+let jane;
+
 sequelize.sync().then(() => {
-  return Frienemy.create({
+  jane = Frienemy.create({
     name: 'Jane Doe',
     birthday: new Date('1980-3-4')
   });
-}).then(frienemy => {
-  console.log(frienemy.get({ // eslint-disable-line no-console
-    plain: true
-  }));
+}).then(() => {
+  console.log(jane); // eslint-disable-line no-console
 }).then(() => {
   return Project.create({
     name: 'Angular 101'
   });
+}).then(() => {
+  // jane.addProject(project);
 });
