@@ -10,6 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/NewEvolution/nodegresql.git"
   },
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "extends": "/Users/ryan/.eslint/personal.json"
+  },
   "keywords": [
     "Node.js",
     "PostgreSQL"
@@ -19,5 +26,10 @@
   "bugs": {
     "url": "https://github.com/NewEvolution/nodegresql/issues"
   },
-  "homepage": "https://github.com/NewEvolution/nodegresql#readme"
+  "homepage": "https://github.com/NewEvolution/nodegresql#readme",
+  "dependencies": {
+    "pg": "^4.5.1",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^3.19.3"
+  }
 }
