@@ -13,7 +13,7 @@ const Project = sequelize.define('project', {
   name: Sequelize.STRING
 });
 
-Project.hasMany(Frienemy, {as: 'workers'});
+Project.hasMany(Frienemy);
 
 let jane;
 
