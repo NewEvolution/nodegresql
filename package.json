@@ -1,0 +1,23 @@
+{
+  "name": "nodegresql",
+  "version": "1.0.0",
+  "description": "Node.js with PostgreSQL",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NewEvolution/nodegresql.git"
+  },
+  "keywords": [
+    "Node.js",
+    "PostgreSQL"
+  ],
+  "author": "Ryan Tanay <rtanay@gmail.com> (http://portfolio.ryantanay.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NewEvolution/nodegresql/issues"
+  },
+  "homepage": "https://github.com/NewEvolution/nodegresql#readme"
+}
